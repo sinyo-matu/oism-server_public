@@ -1,0 +1,413 @@
+{
+  "app_permissions": [
+    {
+      "route": "/orders",
+      "sub_route": [
+        {
+          "path": "/",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            },
+            {
+              "method": "POST",
+              "role": "editor"
+            }
+          ]
+        },
+        {
+          "path": "/:id",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            },
+            {
+              "method": "DELETE",
+              "role": "editor"
+            }
+          ]
+        },
+        {
+          "path": "/taobao_no/:taobao_no",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            }
+          ]
+        },
+        {
+          "path": "/:id/note",
+          "permissions": [
+            {
+              "method": "PATCH",
+              "role": "editor"
+            }
+          ]
+        },
+        {
+          "path": "/check_then_update",
+          "permissions": [
+            {
+              "method": "PUT",
+              "role": "editor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/order_items",
+      "sub_route": [
+        {
+          "path": "/",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            }
+          ]
+        },
+        {
+          "path": "/:id",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            },
+            {
+              "method": "DELETE",
+              "role": "editor"
+            }
+          ]
+        },
+        {
+          "path": "/:id/rate",
+          "permissions": [
+            {
+              "method": "PATCH",
+              "role": "editor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/registers",
+      "sub_route": [
+        {
+          "path": "/",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            },
+            {
+              "method": "POST",
+              "role": "editor"
+            }
+          ]
+        },
+        {
+          "path": "/:id",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            },
+            {
+              "method": "DELETE",
+              "role": "editor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/inventory",
+      "sub_route": [
+        {
+          "path": "/",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            }
+          ]
+        },
+        {
+          "path": "/operations/:item_code_ext",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            }
+          ]
+        },
+        {
+          "path": "/quantity/:item_code_ext",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            }
+          ]
+        },
+        {
+          "path": "/export",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/return",
+      "sub_route": [
+        {
+          "path": "/",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            },
+            {
+              "method": "POST",
+              "role": "editor"
+            }
+          ]
+        },
+        {
+          "path": "/:id",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            },
+            {
+              "method": "DELETE",
+              "role": "editor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/shipment",
+      "sub_route": [
+        {
+          "path": "/",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            },
+            {
+              "method": "POST",
+              "role": "editor"
+            }
+          ]
+        },
+        {
+          "path": "/:id",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            },
+            {
+              "method": "DELETE",
+              "role": "editor"
+            }
+          ]
+        },
+        {
+          "path": "/:id/note",
+          "permissions": [
+            {
+              "method": "PATCH",
+              "role": "editor"
+            }
+          ]
+        },
+        {
+          "path": "/:id/status",
+          "permissions": [
+            {
+              "method": "PUT",
+              "role": "editor"
+            }
+          ]
+        },
+        {
+          "path": "/:id/no",
+          "permissions": [
+            {
+              "method": "PUT",
+              "role": "editor"
+            }
+          ]
+        },
+        {
+          "path": "/:id/vendor",
+          "permissions": [
+            {
+              "method": "PUT",
+              "role": "editor"
+            }
+          ]
+        },
+        {
+          "path": "/:id/export",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            }
+          ]
+        },
+        {
+          "path": "/:id/export_ordered",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            }
+          ]
+        },
+        {
+          "path": "/by_no/:no",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            }
+          ]
+        },
+        {
+          "path": "/export",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/transfer",
+      "sub_route": [
+        {
+          "path": "/",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            },
+            {
+              "method": "POST",
+              "role": "editor"
+            }
+          ]
+        },
+        {
+          "path": "/:id",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            },
+            {
+              "method": "DELETE",
+              "role": "editor"
+            }
+          ]
+        },
+        {
+          "path": "/:id/shipments",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            }
+          ]
+        },
+        {
+          "path": "/:id/shipment_no",
+          "permissions": [
+            {
+              "method": "PUT",
+              "role": "editor"
+            }
+          ]
+        },
+        {
+          "path": "/shipment_no/:shipment_no",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            }
+          ]
+        },
+        {
+          "path": "/by_shipment_id/:shipment_id",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "viewer"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/control",
+      "sub_route": [
+        {
+          "path": "/",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "visitor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/health_check",
+      "sub_route": [
+        {
+          "path": "/",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "visitor"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "route": "/user_info",
+      "sub_route": [
+        {
+          "path": "/",
+          "permissions": [
+            {
+              "method": "GET",
+              "role": "editor"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

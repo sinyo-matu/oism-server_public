@@ -1,0 +1,15 @@
+access_expiration: 30
+refresh_expiration: 604800
+access_token_secret: "access_token_secret"
+refresh_token_secret: "refresh_token_secret"
+signup_secret: "local_signup_secret"
+utility:
+  host: "127.0.0.1"
+database:
+  port: "27001"
+  database_name: "pinkhouse"
+google_service:
+  target_user_ex_id: "ce14e726-5c6b-4f5d-82c3-a5b628584108"
+  host: "localhost"
+  port: "1323"
+  task_list_name: "POSCOMキャンセル待ち"

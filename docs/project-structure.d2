@@ -1,0 +1,65 @@
+img-host: CloudFront: 画像配信 {
+  icon: "https://icons.terrastruct.com/aws%2FNetworking%20&%20Content%20Delivery%2FAmazon-CloudFront.svg"
+}
+
+fe: Frontend: UIの提供 {
+  icon: docs/images/nextjs-logo.png
+}
+
+auth: AuthService {
+    fe: AuthFrontend: 認証画面の提供 {
+    }
+    be: AuthBackend: 認証ロジック{
+    icon: "https://icons.terrastruct.com/dev%2Frust.svg"
+    }
+    db: AuthDataBase: ユーザー情報DB {
+    icon: "https://icons.terrastruct.com/dev%2Fpostgresql.svg"
+    }
+}
+
+be: Backend {
+  be-main: MainService: 主な業務ロジック {
+    icon: "https://icons.terrastruct.com/dev%2Frust.svg"
+    style:{
+      fill: "honeydew"
+    }
+  }
+
+  ut: UtilityService: 帳票生成等の機能 {
+    icon: "https://icons.terrastruct.com/dev%2Frust.svg"
+  }
+
+  wsService: WorkspaceService: ワークスペースの連携 {
+    icon: "docs/images/Go-logo.png"
+  }
+db: DataBase: メイン業務データDB {
+  icon: "https://icons.terrastruct.com/dev%2Fmongodb.svg"
+}
+}
+
+s3: AWS S3: 画像、帳票ファイル等 {
+  icon: "https://icons.terrastruct.com/aws%2FStorage%2FAmazon-Simple-Storage-Service-S3_Bucket-with-Objects_light-bg.svg"
+}
+
+dynamo: AWS DynamoDB: Google 認証トークンの保存 {
+  icon: "https://icons.terrastruct.com/aws%2FDatabase%2FAmazon-DynamoDB.svg"
+}
+
+google: Google Workspace {
+  icon: "docs/images/Google-logo.png"
+}
+
+fe -> be.be-main: api call
+fe -> img-host
+fe -> auth.fe: auth request
+auth.fe -> auth.be: api call
+auth.fe -> fe: redirect
+auth.be-> auth.db
+img-host -> s3
+fe <-> be.be-main: websocket
+be.be-main -> be.db
+be.be-main -> be.ut: api call
+be.be-main -> be.wsService: api call
+be.wsService -> google
+be.wsService -> dynamo
+be.ut -> s3

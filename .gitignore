@@ -1,0 +1,7 @@
+target
+docker-compose.yaml
+static
+.env
+data
+
+**/.DS_Store

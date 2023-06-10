@@ -1,0 +1,6 @@
+target
+docker-compose.yaml
+static
+.env
+test
+data
