@@ -1,5 +1,9 @@
 # OISM -- PH 店舗管理システム Backend
 
+## プレビュー
+
+[![システム画面](https://d14ua4d3ywmgu9.cloudfront.net/oism-cap-v1.png)](https://d14ua4d3ywmgu9.cloudfront.net/oism-cap-v1.mp4)
+
 ## システム概要
 
 OSIM は EC ショップのバックオフィスに必要な機能をまとめて提供するサービスです。
